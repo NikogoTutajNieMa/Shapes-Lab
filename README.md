@@ -154,11 +154,12 @@ The main purpose of this project is to practice:
 
 Planned improvements include:
 
+* Rouding
 * Additional geometric figures
 * More advanced geometric constructions
 * Coordinate-based figure creation
 * Shape transformations
-* SVG or graphical visualization
+* Graphical visualation (using Bezier)
 * Unit tests
 * JavaDoc documentation
 * Serialization and file saving
