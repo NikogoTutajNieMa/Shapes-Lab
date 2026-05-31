@@ -1,74 +1,169 @@
-# Project "Shapes"
+# Shapes
 
-### Description
+A Java object-oriented programming project focused on modeling and analyzing geometric figures. The application allows users to create various 2D shapes, calculate their properties, classify them, and explore relationships between different geometric figures through inheritance and polymorphism.
 
-This application made in Java language is a program where you can define geometrical shape using and analyse them on many ways. The program starts with asking to you choose an operation.
-If you choose 1st command the program will ask then to choose one of the geometrical figures out of 8. If you type an inappropriate number like 9, the program will ask to you either you want to leave that option or to try once again. If you choose the figure, program ask to you about the parameters (like sides, angles or height). If manage to create it you can take it will be stored in static hashmap. If you choose 2nd or 3rd command before making any figure you will be notified that you didn't make any figure. In the menu if you choose 2nd command the program asks you which figure you want to choose, if you choose a figure using the name what you called the figure during it's creating. When the figure is chosen you will get the list of commands about what you can make with that figure. The last command is always intended to leave that figure and you return to menu. 3rd command will display all figures (their name and type)
+## Features
 
+### Supported Shapes
 
+* Circle
+* Triangle
+* Square
+* Rectangle
+* Parallelogram
+* Rhombus
+* Kite (Deltoid)
+* Trapezoid
 
-### Class structure
+### Geometric Calculations
 
-Below there is a multi-level what represents how the figures are organised
+Depending on the shape, the application can calculate:
 
-* Shape
+* Area
+* Perimeter
+* Heights
+* Angles
+* Side lengths
+* Shape classifications
 
-  * Triangle
-  * Circle
-  * Quadrilaterals
+### Shape Classification
 
-    * Trapezoid
-    * Kite
-    * Parallelogram
+#### Triangles
 
-      * Rectangle
+Classification by sides:
 
-        * Square
-      * Rhombus
+* Equilateral
+* Isosceles
+* Scalene
 
-### Features
+Classification by angles:
 
+* Acute
+* Right
+* Obtuse
 
+#### Trapezoids
 
-#### Used Features
+Classification by angle configuration:
 
-* Class
-* Interface
-* Record
-* Enum
-* Custom exception
-* Constructer
-* Overloaded constructers
-* Overriding methods
-* Getters (setters were not required yet)
-* Enhanced switches
-* Polymorphism
-* ANSII Escape code
-* Private
-* Public
-* Protected
-* Abstract class
-* Inheritance
-* Exception handling
+* Acute trapezoid
+* Right trapezoid
+* Obtuse trapezoid
 
+## Object-Oriented Design
 
+The project was developed to demonstrate key Object-Oriented Programming concepts:
 
-#### Planned features
+### Interfaces
 
-* Rounding
-* Showing facts, formulas etc. about figures
-* Geometrical input (using custom points)
-* Multi-language support (currently working on Polish and Spanish translation but it is planned to make also German)
-* GUI
-* Drawing figures using vector graphic
+The `Shape` interface defines a common contract for all geometric figures:
 
-### Instalation
+```java
+public interface Shape {
+    double area();
+    double perimeter();
+    FiguresTypes figureType();
+}
+```
 
-To install this follow this simple instructiom
+### Inheritance
 
-1. Create a Java Project called
+The project uses an inheritance hierarchy to model relationships between geometric figures:
 
+```text
+Shape
+├── Circle
+├── Triangle
+└── Quadrilateral
+    ├── Trapezoid
+    ├── Kite
+    └── Parallelogram
+        ├── Rectangle
+        │   └── Square
+        └── Rhombus
+```
 
+### Polymorphism
 
-### Author
+All figures can be handled through the common `Shape` interface, allowing generic operations regardless of the concrete figure type.
 
+### Encapsulation
+
+Shape properties are stored as private or protected fields and accessed through dedicated methods.
+
+### Enums
+
+Enums are used to represent:
+
+* Figure types
+* Triangle side classifications
+* Triangle angle classifications
+
+Additionaly one enum was made to use ANSII Escape Code
+
+### Custom Exceptions
+
+The project includes custom exceptions for invalid geometric configurations:
+
+* `TriangleInequalityException`
+* `InvalidAngleException`
+
+These exceptions help ensure that only mathematically valid figures can be created.
+
+## Validation
+
+The application validates user input and geometric constraints, including:
+
+* Positive side lengths
+* Valid angle ranges
+* Triangle inequality theorem
+* Shape-specific geometric requirements
+
+## Console Application
+
+The project includes an interactive console interface that allows users to:
+
+1. Create geometric figures
+2. Store created figures
+3. Browse existing figures
+4. Perform calculations on selected figures
+5. Display information about all created figures
+
+## Technologies
+
+* Java
+* Object-Oriented Programming (OOP)
+* Collections Framework (`HashMap`)
+* Enums
+* Custom Exceptions
+* Mathematical Geometry
+
+## Educational Goals
+
+The main purpose of this project is to practice:
+
+* Object-Oriented Design
+* Inheritance Hierarchies
+* Interface-Based Programming
+* Exception Handling
+* Geometric Algorithms
+* Mathematical Modeling
+* Clean Java Code Practices
+
+## Future Development
+
+Planned improvements include:
+
+* Additional geometric figures
+* More advanced geometric constructions
+* Coordinate-based figure creation
+* Shape transformations
+* SVG or graphical visualization
+* Unit tests
+* JavaDoc documentation
+* Serialization and file saving
+* Support for concave quadrilaterals
+
+## Author
+
+Created by Oskar Faluszewski
