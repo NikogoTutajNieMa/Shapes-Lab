@@ -641,11 +641,11 @@ public class Main {
                 case 4 -> System.out.println("The diagonal b of parallelogram is: " + Typography.BOLD.getCode() + parallelogram.diagonalB() + Typography.RESET.getCode());
                 case 5 -> System.out.println("The parallelogram side a is: " + Typography.BOLD.getCode() + parallelogram.getSideA() + Typography.RESET.getCode());
                 case 6 -> System.out.println("The parallelogram side b is: " + Typography.BOLD.getCode() + parallelogram.getSideB() + Typography.RESET.getCode());
-                case 7 -> System.out.println(parallelogram.isRhombus() ? "This parallelogram is a square (all sides are equal)" : "This rectangle is not a square");
-                case 8 -> System.out.println(parallelogram.isRectangle() ? "This parallelogram is a square (all angles are 90°)" : "This rectangle is not a square");
+                case 7 -> System.out.println(parallelogram.isRhombus() ? "This parallelogram is a rhombus (all sides are equal)" : "This rectangle is not a rhombus");
+                case 8 -> System.out.println(parallelogram.isRectangle() ? "This parallelogram is a rectangle (all angles are 90°)" : "This rectangle is not a rectangle");
                 case 9 -> System.out.println(parallelogram.isSquare() ? "This parallelogram is a square (all sides are equal and all angles are 90°)" : "This rectangle is not a square");
                 case 10 -> System.out.println("The parallelogram alpha angle is: " + Typography.BOLD.getCode() + parallelogram.getAlphaAngleDegrees() + Typography.RESET.getCode());
-                case 11 -> System.out.println("The parallelogram beta angle is: " + Typography.BOLD.getCode() + parallelogram.getAlphaAngleDegrees() + Typography.RESET.getCode());
+                case 11 -> System.out.println("The parallelogram beta angle is: " + Typography.BOLD.getCode() + parallelogram.getBetaAngleDegrees() + Typography.RESET.getCode());
                 case 12 -> isUsed = false;
                 default -> System.out.println("Invalid operation");
             }
