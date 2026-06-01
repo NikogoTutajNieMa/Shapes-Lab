@@ -42,14 +42,6 @@ Classification by angles:
 * Right
 * Obtuse
 
-#### Trapezoids
-
-Classification by angle configuration:
-
-* Acute trapezoid
-* Right trapezoid
-* Obtuse trapezoid
-
 ## Object-Oriented Design
 
 The project was developed to demonstrate key Object-Oriented Programming concepts:
