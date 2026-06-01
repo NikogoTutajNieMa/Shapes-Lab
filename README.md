@@ -28,8 +28,6 @@ Depending on the shape, the application can calculate:
 
 ### Shape Classification
 
-#### Triangles
-
 Classification by sides:
 
 * Equilateral
